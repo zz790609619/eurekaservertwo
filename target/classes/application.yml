@@ -1,0 +1,16 @@
+#设置tomcat服务端口号
+server:
+  port : 8762
+spring:
+  application:
+    name: eurekazztwo
+
+eureka:
+  client:
+    fetch-registry: true #同步注册中心的信息
+    register-with-eureka: true #注册中心注册自己
+    service-url:
+      defaultZone: http://peer1:8761/eureka #注册到注册中心
+  instance:
+    hostname: peer2
+    instance-id: peer2
